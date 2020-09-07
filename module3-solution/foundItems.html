@@ -1,0 +1,19 @@
+
+<table class="table table-bordered">
+<thead>
+	<th>Menu Item</th>
+	<th>Name</th>
+	<th>Description</th>
+	<th>Action</th>
+</thead>
+<tbody>
+	<tr ng-repeat="item in list">
+		<td>{{item.short_name}}</td>
+		<td>{{item.name}}</td>
+		<td>{{item.description}}</td>
+		<td><button ng-click="onRemove({index:$index});">Don't want this one</button></td>
+	</tr>
+</tbody>
+	
+</table>
+
