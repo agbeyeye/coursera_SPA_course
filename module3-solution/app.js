@@ -22,12 +22,12 @@
 				ctrl.removedItems=[]
 
 				if(ctrl.searchItem=="" || ctrl.searchItem==null){
-					console.log('error detected');
+					
 					ctrl.error="Nothing  Found";
 					return;
 				}else{
 					for (var i = data.menu_items.length - 1; i >= 0; i--) {
-					if (data.menu_items[i].name.includes(ctrl.searchItem))
+					if (data.menu_items[i].name.toLowerCase().includes(ctrl.searchItem.toLowerCase()))
 					{
 						ctrl.found.push(data.menu_items[i]);
 						ctrl.error="";
